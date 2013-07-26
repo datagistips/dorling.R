@@ -91,7 +91,7 @@ return(list(xy=coords, radius=radius))
 }
 
 
-## REATING DISCS FROM POINTS AND RADIUSES
+## CREATING DISCS FROM POINTS AND RADIUSES
 
 discsFromPoints <- function(coords, radiuses) {
   out <- lapply(1:nrow(coords), function(i) {
