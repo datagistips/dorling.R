@@ -89,3 +89,15 @@ for (ratio in sqs) {
 }
 return(list(xy=coords, radius=radius))
 }
+
+
+## REATING DISCS FROM POINTS AND RADIUSES
+
+discsFromPoints <- function(coords, radiuses) {
+  out <- lapply(1:nrow(coords), function(i) {
+    disc <- gBuffer(SpatialPoints(coords)[i, ], width=radiuses[i], byid=T); 
+    disc <- spChFIDs(disc, row.names(coords)[i])
+    return(disc)})
+  discs <- do.call("rbind", out)  
+  return(discs)
+}
