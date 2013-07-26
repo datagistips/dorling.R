@@ -1,7 +1,7 @@
 library(rgeos)
 library(spdep)
  
- 
+
 # DISTANCE
  
 distance <- function(pt1, pt2) {
