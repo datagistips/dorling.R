@@ -2,7 +2,7 @@ library(XML)
 library(RCurl)
 library(rgdal)
  
-source("DORLING.R")
+source("dorling.R")
  
 # GEOGLA DEPARTEMENTS
 deps <- readOGR(".", "DEPARTEMENT.shp")
